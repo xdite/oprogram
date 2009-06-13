@@ -6,14 +6,6 @@ namespace :dev do
   desc "Setup system data"
   task :setup => :environment do
 
-      puts "Create system user"
-      u = User.new( :login => "xdite", :password => "openid", :password_confirmation => "openid", :email => "root@openid.com" )
-      u.activated_at = Time.now
-      u.save!
-      
-      puts "Create system user"
-      u = User.new( :login => "test", :password => "openid", :password_confirmation => "openid", :email => "test@openid.com" )
-      u.save!
   end
 
 end
