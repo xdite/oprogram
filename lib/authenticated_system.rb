@@ -183,5 +183,10 @@ module AuthenticatedSystem
         :value   => @current_user.remember_token,
         :expires => @current_user.remember_token_expires_at }
     end
+    
+    def authentication_failed(message, destination='/')
+      flash[:error] = message
+      redirect_to destination
+    end
 
 end

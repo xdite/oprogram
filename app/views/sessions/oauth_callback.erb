@@ -1,0 +1,4 @@
+request_token <%= @request_token.token %> <br>
+oauth_verifier : <%= params[:oauth_verifier]%> <br>
+access_token <%= @access_token.token %> <br>
+<%= @client.user.located_at %>
